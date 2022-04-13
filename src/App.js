@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Formik } from 'formik';
+import React, { useState } from "react";
+import FLoginForm from "./components/FLoginForm";
+import FRegisterForm from './components/FRegisterForm';
 
 function App() {
+  const [values, setValues] = useState({
+    password: "",
+    showPassword: false,
+  });
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <FRegisterForm
+        setShowLoginForm={setShowLoginForm}
+        showLoginForm={showLoginForm}
+        values={values}
+        setValues={setValues}
+      />
+     
+<FLoginForm showLoginForm={showLoginForm} setShowLoginForm={setShowLoginForm} />
+     {/* <FRegisterForm/>  */}
     </div>
+    // {
+    //   data && data.length>0 && data.map((item)=><p>{item.about}</p>)
+    // }
   );
 }
-
 export default App;

@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-cont {
+  background-color: rgb(41, 40, 38);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 5%;
+  border: 30px solid rgb(186, 189, 186);
+  padding: 30px;
+}
+
+.input-cont {
+  width: 20vw;
+  padding-top: 3%;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+h2 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-check-clss {
+  color: white;
+}
+.btn-entry {
+  color: rgb(255, 255, 255);
+  background: #39d6a2;
+  width: 25vw;
+  height: 40px;
+  border: none;
+  font-size: x-large;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 7%; */
+  border-radius: 0;
+}
+.btn-entry:hover {
+  color: rgb(255, 255, 255);
+  background: #39d6a2;
+
+  border: none;
+}
+.form-ctrl-input {
+  border: 1px solid white;
+  border-radius: 0;
+  color: rgb(167, 165, 165);
+  background-color: rgb(41, 40, 38);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  direction: rtl;
+  width: 25vw;
+  margin-top: 8%;
+  margin-top: 8%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.forgot-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.button-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-top-login {
+  border-radius: 0;
+  border: none;
+  background: #39d6a2;
+  width: 12.5vw;
+  margin-bottom: 3%;
+}
+.btn-top-register {
+  border-radius: 0;
+  background-color: rgb(92, 88, 88);
+  border: none;
+  width: 12.5vw;
+  margin-bottom: 3%;
+}
+
+.bg-grey {
+  background-color: rgb(75, 73, 73);
+}
+.bg-green {
+  background-color: #217458;
+}
+
+.first-last-input-cont {
+  display: flex;
+  flex-direction: row;
+}
+/* /======================= */
+.first-last-name {
+  width: 49%;
+  margin: 0 1% 0 1%;
+  border-radius: 0;
+  direction: rtl;
+  border: 1px solid white;
+  background-color: rgb(41, 40, 38);
+}
+
+.form-ctrl-input-register-email {
+  border: 1px solid white;
+  border-radius: 0;
+  color: rgb(167, 165, 165);
+  background-color: rgb(41, 40, 38);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  direction: rtl;
+  width: 25vw;
+  margin-top: 6%;
+}
+.form-ctrl-input-register-pass {
+  border: 1px solid white;
+  border-radius: 0;
+  color: rgb(167, 165, 165);
+  background-color: rgb(41, 40, 38);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  /* direction: rtl; */
+  width: 25vw;
+}
+#input-group-dropdown-1 {
+  border: 1px solid white;
+  border-radius: 0;
+  margin-top: 20px;
+  background-color: rgb(41, 40, 38);
+  width: 12.2vw;
+  direction: rtl;
+  text-align: start;
+}
+.birth-loc {
+  float: right;
+}
+.education {
+  background-color: rgb(41, 40, 38);
+  text-align: start;
+  color: aliceblue;
+  direction: rtl;
+}
+.education-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.province-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.forgot {
+  color: #217458;
+  font-size: larger;
+  font-weight: bold;
+  margin-right: 0;
+  float: right;
+  text-align: right;
+}
+.forgot-and-entry-btn {
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: auto;
+}
+.makeHidden {
+  display: none;
+}
+.makenotHidden {
+  display: flex;
 }
