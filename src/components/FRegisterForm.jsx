@@ -42,27 +42,7 @@ const FRegisterForm = ({
   };
 
   return (
-    <Container
-      style={{ width: "750px" }}
-      className="form-cont"
-      // className={`form-cont ${
-      //   showLoginForm ? "makeHidden" : "makenotHidden"
-      // }`}
-    >
-      <div className="button-cont">
-        <Button className="btn-top-login" type="submit">
-          ثبت نام
-        </Button>
-        <Button
-          // onClick={handleShowLoginForm}
-          className="btn-top-register"
-          type="submit"
-        >
-          ورود
-        </Button>
-      </div>
-
-      <h2>رایگان ثبت نام کنید</h2>
+    <>
       <Form className="input-cont">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <div className="first-last-input-cont">
@@ -89,25 +69,8 @@ const FRegisterForm = ({
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Input
-            label="کلمه عبور"
-            variant="کلمه عبور"
-            defaultValue="کلمه عبور"
-            className="form-ctrl-input-register-pass"
-            type={values.showPassword ? "text" : "password"}
-            onChange={handlePasswordChange("password")}
-            value={values.password}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
+         
+          
           <div className="education-cont">
             <DropdownButton
               variant="outline-secondary"
@@ -194,27 +157,19 @@ const FRegisterForm = ({
             </Dropdown.Item> */}
             </DropdownButton>
           </div>
-          <DropdownButton
-            className="birth-loc"
-            required
-            variant="outline-secondary"
-            title="محل تولد"
-            id="input-group-dropdown-1"
-          >
-            <Dropdown.Item className="education" href="#">
-              دکتری
-            </Dropdown.Item>
-            <Dropdown.Item className="education" href="#">
-              کارشناسی ارشد
-            </Dropdown.Item>
-            <Dropdown.Item className="education" href="#">
-              کارشناسی
-            </Dropdown.Item>
-            <Dropdown.Item className="education" href="#">
-              دیپلم
-            </Dropdown.Item>
-          </DropdownButton>
+          
         </Form.Group>
+
+        
+
+
+
+
+
+
+
+
+
         <Form.Group
           className="mb-3 forgot-cont"
           controlId="formBasicCheckbox"
@@ -224,34 +179,7 @@ const FRegisterForm = ({
           ورود
         </Button>
       </Form>
-    </Container>
-    // <form onSubmit={formik.handleSubmit}>
-    //   <label htmlFor="firstName">First Name</label>
-    //   <input
-    //     id="firstName"
-    //     name="firstName"
-    //     type="text"
-    //     onChange={formik.handleChange}
-    //     value={formik.values.firstName}
-    //   />
-    //   <label htmlFor="lastName">Last Name</label>
-    //   <input
-    //     id="lastName"
-    //     name="lastName"
-    //     type="text"
-    //     onChange={formik.handleChange}
-    //     value={formik.values.lastName}
-    //   />
-    //   <label htmlFor="email">Email Address</label>
-    //   <input
-    //     id="email"
-    //     name="email"
-    //     type="email"
-    //     onChange={formik.handleChange}
-    //     value={formik.values.email}
-    //   />
-    //   <button type="submit">Submit</button>
-    // </form>
+    </>
   );
 };
 export default FRegisterForm;

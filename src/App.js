@@ -1,8 +1,9 @@
 import "./App.css";
-import { Formik } from 'formik';
+import { Formik } from "formik";
 import React, { useState } from "react";
+import { Button, Form, Container } from "react-bootstrap";
 import FLoginForm from "./components/FLoginForm";
-import FRegisterForm from './components/FRegisterForm';
+import FRegisterForm from "./components/FRegisterForm";
 
 function App() {
   const [values, setValues] = useState({
@@ -11,22 +12,32 @@ function App() {
   });
   const [showLoginForm, setShowLoginForm] = useState(false);
 
-  
+  const [tab, setTab] = useState("login");
+
   return (
     <div className="App">
-       <FRegisterForm
-        setShowLoginForm={setShowLoginForm}
-        showLoginForm={showLoginForm}
-        values={values}
-        setValues={setValues}
-      />
-     
-<FLoginForm showLoginForm={showLoginForm} setShowLoginForm={setShowLoginForm} />
-     {/* <FRegisterForm/>  */}
+      <Container style={{ width: "750px" }} className="form-cont">
+        <div className="button-cont">
+          <Button
+            className="btn-top-register"
+            type="submit"
+            onClick={() => setTab("register")}
+          >
+            ثبت نام
+          </Button>
+
+          <Button
+            className="btn-top-login"
+            type="submit"
+            onClick={() => setTab("login")}
+          >
+            ورود
+          </Button>
+        </div>
+
+        {tab == "login" ? <FLoginForm /> : <FRegisterForm />}
+      </Container>
     </div>
-    // {
-    //   data && data.length>0 && data.map((item)=><p>{item.about}</p>)
-    // }
   );
 }
 export default App;
